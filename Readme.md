@@ -39,4 +39,8 @@
 
 ##
 
-<image src="/teo-splint-first/front/blob/main/assets/1.png?raw=true" alt="시안 이미지" />
+<image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/1.png" alt="시안 이미지" />
+<image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/2.png" alt="시안 이미지" />
+<image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/3.png" alt="시안 이미지" />
+<image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/4.png" alt="시안 이미지" />
+<image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/5.png" alt="시안 이미지" />
