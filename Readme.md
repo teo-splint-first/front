@@ -42,5 +42,6 @@
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/1.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/2.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/3.png" width="47%" height="auto" alt="시안 이미지" />
+<image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/3-1.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/4.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/5.png" width="47%" height="auto" alt="시안 이미지" />
