@@ -37,7 +37,7 @@
 - 자신의 브랜치(기능 or 개인)별로 만들고 작업후에 develop으로 머지합니다.
 - pr시에는 단톡방에 노티해줍니다.
 
-##
+## 디자인 시안
 
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/1.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/2.png" width="47%" height="auto" alt="시안 이미지" />
@@ -45,3 +45,7 @@
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/3-1.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/4.png" width="47%" height="auto" alt="시안 이미지" />
 <image src="https://raw.githubusercontent.com/teo-splint-first/front/main/assets/5.png" width="47%" height="auto" alt="시안 이미지" />
+
+## API 명세서
+
+[link] (https://jowl950313.notion.site/1-API-b618e4aae9764e6cbfef4784bfb96f57)
