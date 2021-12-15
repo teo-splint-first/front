@@ -48,4 +48,4 @@
 
 ## API 명세서
 
-[link] (https://jowl950313.notion.site/1-API-b618e4aae9764e6cbfef4784bfb96f57)
+[link](https://jowl950313.notion.site/1-API-b618e4aae9764e6cbfef4784bfb96f57)
