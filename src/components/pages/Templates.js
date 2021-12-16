@@ -37,6 +37,7 @@ const Text = styled.p`
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
+  line-height: 1.15;
 `;
 
 const RouletteWrap = styled.div`

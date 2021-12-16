@@ -27,6 +27,8 @@ const Text = styled.p`
   font-size: 28px;
   color: #fff;
   text-align: center;
+  line-height: 1.15;
+  margin: 0;
 `;
 const Desc = styled.div`
   margin-bottom: 137px;
