@@ -21,7 +21,7 @@ const Roulette = () => {
     <Template goBackBtn>
       <canvas ref={canvasRef} width="150" height="150"></canvas>
       <LinkButton onClick={() => navigate("/make")}>수정</LinkButton>
-      <LinkButtonn onClick={() => navigate("/result")}>돌리기</LinkButtonn>
+      <LinkButton onClick={() => navigate("/result")}>돌리기</LinkButton>
     </Template>
   );
 };

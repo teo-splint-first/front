@@ -22,6 +22,7 @@ const MakeTemplate = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [roulette, setRoulette] = useState(mock);
   const [inputVal, setInputVal] = useState("");
+  const navigate = useNavigate();
   const handleEdit = () => {
     setIsEdit((prev) => !prev);
   };
