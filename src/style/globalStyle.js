@@ -26,7 +26,6 @@ button {
 }
 body{
   background:#f7f7f7;
-  /* 스크롤바 제거 */
   &::-webkit-scrollbar {
     display: none;
   }
