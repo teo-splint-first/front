@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Slider, Input } from "antd";
 import Template from "../common/Template";
 import { EditOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router";
 import styled from "styled-components";
 import "antd/dist/antd.css";
 
