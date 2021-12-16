@@ -11,7 +11,7 @@ const App = () => {
     <Routes>
       <Route path="/">
         <Route index element={<Home />} />
-        <Route path="template" element={<Templates />} />
+        <Route path="template/:topic" element={<Templates />} />
         <Route path="make" element={<MakeTemplate />} />
         <Route path="roulette" element={<Roulette />} />
         <Route path="result" element={<Result />} />

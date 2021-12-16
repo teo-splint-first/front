@@ -3,6 +3,8 @@ import { Slider, Input } from "antd";
 import Template from "../common/Template";
 import { EditOutlined } from "@ant-design/icons";
 import styled from "styled-components";
+import "antd/dist/antd.css";
+
 const mock = [
   { label: "족발", point: 5 },
   { label: "족발", point: 5 },

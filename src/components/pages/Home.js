@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
 import Template from "../common/Template";
+import { topicBtnArr } from "../../mock/constant";
 
 const Home = () => {
   const navigate = useNavigate();
-  const topicBtnArr = ["혼자", "친구", "회사", "가족", "회식", "비오는날", "소개팅", "단체"];
   return (
     <Template>
       <Desc>
@@ -15,7 +15,7 @@ const Home = () => {
       <Text>상황에 맞는 주제를 골라보세요</Text>
       <Topic>
         {topicBtnArr.map((topic) => (
-          <Btn key={topic} onClick={() => navigate("/template", { state: topic })}>
+          <Btn key={topic} onClick={() => navigate(`/template/${topic}`)}>
             {topic}
           </Btn>
         ))}
