@@ -7,6 +7,7 @@ const Roulette = () => {
   const navigate = useNavigate();
   const { state: roulette } = useLocation();
   const canvasRef = useRef();
+  console.log(roulette);
   useEffect(() => {
     var ctx = canvasRef.current.getContext("2d");
     ctx.beginPath();
