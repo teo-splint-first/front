@@ -6,10 +6,11 @@ import { GlobalStyle } from "./style/globalStyle";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <>123</> */}
     <BrowserRouter>
       <App />
       <GlobalStyle />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root"),
+  document.getElementById("root")
 );
