@@ -36,7 +36,7 @@ const MainTemplate = styled.div`
   box-sizing: border-box;
   width: 480px;
   height: 700px;
-  padding: 60px;
+  padding: 50px 60px;
   background-color: #6bc59c;
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.15);
 `;
