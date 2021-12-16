@@ -11,7 +11,7 @@ const Templates = () => {
     const len = data[topic].length;
     const randomNum = Math.floor(Math.random() * len);
     return data[topic][randomNum];
-  }, []);
+  }, [topic]);
 
   return (
     <Template goBackBtn>
