@@ -19,7 +19,7 @@ const mock = [
  */
 const MakeTemplate = () => {
   const [title, setTitle] = useState("출출한 밤 야식");
-  const [isEdit, setIsEdit] = useState(true);
+  const [isEdit, setIsEdit] = useState(false);
   const [roulette, setRoulette] = useState(mock);
   const [inputVal, setInputVal] = useState("");
   const handleEdit = () => {
@@ -93,7 +93,7 @@ const MakeTemplate = () => {
           </li>
         ))}
       </ul>
-      <Submit>완료</Submit>
+      <Submit onClick={() => navigate("/roulette")}>완료</Submit>
     </Template>
   );
 };
