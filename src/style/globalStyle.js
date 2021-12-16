@@ -1,15 +1,17 @@
 import { createGlobalStyle } from "styled-components";
+import NanumSquareEB from "../fonts/NanumSquareEB.woff";
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-/* font 설정 */
-input {
- font-family: 'Noto Sans KR', sans-serif !important;
+
+@font-face {
+	font-family: 'NanumSquareEB';
+	font-display: fallback;
+	src: url(${NanumSquareEB}) format('woff')
 }
 *{
   margin:0;
   padding:0;
-  font-family: 'Noto Sans KR', sans-serif !important;
+  font-family: 'NanumSquareEB' !important;
   &:focus,&:hover,&:active{
   outline:none !important;
   }
