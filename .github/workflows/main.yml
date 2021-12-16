@@ -11,19 +11,7 @@ jobs:
       - name: Checkout source code. # 레포지토리 체크아웃
         uses: actions/checkout@main
 
-      # - name: Cache node modules      # node modules 캐싱
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: node_modules
-      #     key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.OS }}-build-
-      #       ${{ runner.OS }}-
-
-      # - name: node_modules제거 # Node v 확인
-      #   run: rm -rf ./node_modules
-
-      - name: Check Node v # Node v 확인
+      - name: last update check
         run: npx browserslist@latest --update-db
 
       - name: Install Dependencies # 의존 파일 설치
@@ -40,4 +28,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            build s3://selector # 자신의 레포지토리로 변경해주세요.
+            build s3://selector
