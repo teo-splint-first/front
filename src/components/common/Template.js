@@ -94,6 +94,8 @@ const GoBackBtn = styled.div`
 const Title = styled.h1`
   color: #fff;
   font-size: 50px;
+  line-height: 1.15;
+  margin: 0;
 `;
 
 export default Template;

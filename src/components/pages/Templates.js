@@ -46,6 +46,7 @@ const Text = styled.p`
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
+  line-height: 1.15;
 `;
 
 const RouletteWrap = styled.div`
@@ -77,8 +78,8 @@ const Roulette = styled.div`
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    height: 50px;
-    padding: 0 20px;
+    min-height: 50px;
+    padding: 10px 20px;
   }
 `;
 
