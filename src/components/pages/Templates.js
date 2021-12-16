@@ -68,8 +68,8 @@ const Roulette = styled.div`
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    height: 50px;
-    padding: 0 20px;
+    min-height: 50px;
+    padding: 10px 20px;
   }
 `;
 
