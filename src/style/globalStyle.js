@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   margin:0;
   padding:0;
   font-family: 'NanumSquareEB' !important;
+  letter-spacing: -2px;
   &:focus,&:hover,&:active{
   outline:none !important;
   }
