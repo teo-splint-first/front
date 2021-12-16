@@ -34,6 +34,7 @@ const FullWrap = styled.div`
 
 const MainTemplate = styled.div`
   box-sizing: border-box;
+  position: relative;
   width: 480px;
   height: 700px;
   padding: 50px 60px;

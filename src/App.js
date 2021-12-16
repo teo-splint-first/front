@@ -5,6 +5,7 @@ import MakeTemplate from "./components/pages/Make";
 import Result from "./components/pages/Result";
 import Roulette from "./components/pages/Roulette";
 import Templates from "./components/pages/Templates";
+import "antd/dist/antd.css";
 const App = () => {
   return (
     <Routes>
