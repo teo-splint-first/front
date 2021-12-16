@@ -1,17 +1,15 @@
 import React, { useCallback } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import styled from "styled-components";
 import Template from "../common/Template";
 import { data } from "../../mock/mock";
 
 const Templates = () => {
   const navigate = useNavigate();
-  const { state: topic } = useLocation();
-
+  const { topic } = useParams();
   const randomPick = useCallback(() => {
     const len = data[topic].length;
     const randomNum = Math.floor(Math.random() * len);
-
     return data[topic][randomNum];
   }, []);
 
@@ -20,14 +18,25 @@ const Templates = () => {
       <Text>원하는 룰렛을 선택하세요</Text>
       <RouletteWrap>
         {data[topic].map((roulette, index) => (
-          <Roulette key={index} onClick={() => navigate("/roulette", { state: roulette })}>
+          <Roulette
+            key={index}
+            onClick={() => navigate("/roulette", { state: roulette })}
+          >
             <RouletteTop>{roulette.title_give}</RouletteTop>
-            <RouletteBottom>{roulette.contents_give.map((food) => `${food.name}, `)}</RouletteBottom>
+            <RouletteBottom>
+              {roulette.contents_give.map((food) => `${food.name}, `)}
+            </RouletteBottom>
           </Roulette>
         ))}
       </RouletteWrap>
-      <LinkButton onClick={() => navigate("/roulette", { state: randomPick() })}>아무거나 랜덤 선택</LinkButton>
-      <LinkButton onClick={() => navigate("/make")}>새로운 룰렛 생성</LinkButton>
+      <LinkButton
+        onClick={() => navigate("/roulette", { state: randomPick() })}
+      >
+        아무거나 랜덤 선택
+      </LinkButton>
+      <LinkButton onClick={() => navigate("/make")}>
+        새로운 룰렛 생성
+      </LinkButton>
     </Template>
   );
 };

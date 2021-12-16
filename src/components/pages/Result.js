@@ -27,7 +27,7 @@ const Result = ({ templateName, result }) => {
 };
 
 const Top = styled.div`
-  magin-top: 50px;
+  margin-top: 50px;
   margin-bottom: 85px;
 `;
 const Text = styled.p`
