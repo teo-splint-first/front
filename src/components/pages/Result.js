@@ -1,16 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import Template from "../common/Template";
 import styled from "styled-components";
 
-const Result = ({ templateName, result }) => {
+const Result = () => {
   const navigate = useNavigate();
+  const {
+    state: { template, result },
+  } = useLocation();
 
   return (
     <Template>
       <Top>
         <ResultDesc>
-          <Text>Selector가 {templateName}에서</Text>
+          <Text>Selector가 {template}에서</Text>
           <ResultText>{result}</ResultText>
           <Text>골랐습니다.</Text>
         </ResultDesc>
@@ -34,14 +37,21 @@ const Text = styled.p`
   font-size: 28px;
   color: #fff;
   text-align: center;
+  margin: 0;
+  line-height: 1.15;
 `;
 const ResultText = styled.p`
   font-size: 40px;
   color: #10af8d;
   text-align: center;
+  margin: 0;
+  line-height: 1.15;
 `;
 const ResultDesc = styled.div`
   margin-bottom: 35px;
+  & > p {
+    margin-bottom: 10px;
+  }
 `;
 const MapDesc = styled.div`
   margin-bottom: 20px;
