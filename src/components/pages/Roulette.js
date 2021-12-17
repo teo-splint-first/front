@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import { useLocation, useNavigate } from "react-router";
 import styled from "styled-components";
 import Template from "../common/Template";
@@ -16,7 +16,7 @@ const Roulette = () => {
     setTimeout(() => {
       navigate("/result", { state: { template: roulette.title_give, result: roulette.contents_give[resultIndex].name } });
     }, 4500);
-  }, [rouletteRef, randomRotate, roulette, resultIndex]);
+  }, [rouletteRef, randomRotate, roulette, resultIndex, navigate]);
 
   return (
     <Template goBackBtn>
