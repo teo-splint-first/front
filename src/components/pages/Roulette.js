@@ -16,7 +16,7 @@ const Roulette = () => {
     setTimeout(() => {
       navigate("/result", { state: { template: roulette.title_give, result: roulette.contents_give[resultIndex].name } });
     }, 4500);
-  }, [rouletteRef, roulette, navigate]);
+  }, [rouletteRef, roulette, resultIndex, navigate]);
 
   return (
     <Template goBackBtn>
