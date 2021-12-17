@@ -24,7 +24,13 @@ const Result = () => {
         <Text>지도를 이용해</Text>
         <Text>주변 가게를 추천해드립니다.</Text>
       </MapDesc>
-      <LinkButton>주변 가게 추천받기</LinkButton>
+      <LinkButton
+        onClick={() => {
+          window.open(`https://map.naver.com/v5/search/${result}`);
+        }}
+      >
+        주변 가게 추천받기
+      </LinkButton>
     </Template>
   );
 };
