@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Slider, Input } from "antd";
 import Template from "../common/Template";
 import { EditOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import styled from "styled-components";
 import "antd/dist/antd.css";
 
@@ -19,9 +19,14 @@ const mock = [
  * }[]
  */
 const MakeTemplate = () => {
-  const [title, setTitle] = useState("출출한 밤 야식");
+  const { state: rouletteData } = useLocation();
+  const [title, setTitle] = useState(rouletteData?.title_give || "");
   const [isEdit, setIsEdit] = useState(false);
-  const [roulette, setRoulette] = useState(mock);
+  const [roulette, setRoulette] = useState(
+    rouletteData
+      ? rouletteData.contents_give.map((el) => ({ label: el.name, point: 5 }))
+      : [],
+  );
   const [inputVal, setInputVal] = useState("");
   const navigate = useNavigate();
   const handleEdit = () => {
@@ -30,6 +35,10 @@ const MakeTemplate = () => {
   const handleAdd = () => {
     if (inputVal === "") {
       alert("음식이름을 작성해주세요.");
+      return;
+    }
+    if (roulette.length === 4) {
+      alert("현재 룰렛은 4개만 가능합니다.");
       return;
     }
     setRoulette((prev) => [...prev, { label: inputVal, point: 5 }]);
@@ -43,11 +52,30 @@ const MakeTemplate = () => {
   const handleDelete = (idx) => {
     setRoulette((prev) => prev.filter((el, elIdx) => idx !== elIdx));
   };
+  const handleSubmit = () => {
+    if (title === "") {
+      alert("음식이름을 작성해주세요.");
+      return;
+    }
+    if (roulette.length !== 4) {
+      alert("현재 룰렛은 4개만 가능합니다.");
+      return;
+    }
+
+    navigate("/roulette", {
+      state: {
+        title_give: title,
+        contents_give: roulette
+          .slice(0, 4)
+          .map((el) => ({ name: el.label, percent: 25 })),
+      },
+    });
+  };
   return (
     <Template goBackBtn={true}>
       {!isEdit && (
         <Title>
-          {title}
+          {title === "" ? "룰렛이름을 정해주세요" : title}
           <EditOutlined
             onClick={handleEdit}
             style={{ marginLeft: "10px", cursor: "pointer" }}
@@ -77,7 +105,7 @@ const MakeTemplate = () => {
             <List>
               <ListLabel>{el.label}</ListLabel>
               <Slider
-                style={{ minWidth: "280px" }}
+                style={{ width: "100%" }}
                 max={10}
                 min={0}
                 defaultValue={el.point}
@@ -95,7 +123,7 @@ const MakeTemplate = () => {
           </li>
         ))}
       </ul>
-      <Submit onClick={() => navigate("/roulette")}>완료</Submit>
+      <Submit onClick={handleSubmit}>완료</Submit>
     </Template>
   );
 };
@@ -125,13 +153,14 @@ const List = styled.article`
 const ListLabel = styled.h3`
   color: #fff;
   margin: 0;
-  min-width: 40px;
+  min-width: 50px;
 `;
 
 const DeleteButton = styled.button`
   border: 0;
   background: none;
   color: #fff;
+  min-width: 40px;
 `;
 const Submit = styled.button`
   width: calc(100% - 100px);
