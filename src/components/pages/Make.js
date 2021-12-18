@@ -6,18 +6,6 @@ import { useNavigate, useLocation } from "react-router";
 import styled from "styled-components";
 import "antd/dist/antd.css";
 
-const mock = [
-  { label: "족발", point: 5 },
-  { label: "족발", point: 5 },
-  { label: "족발", point: 5 },
-  { label: "족발", point: 5 },
-];
-/**
- * {
- *  label: string;
- *  point:number;
- * }[]
- */
 const MakeTemplate = () => {
   const { state: rouletteData } = useLocation();
   const [title, setTitle] = useState(rouletteData?.title_give || "");
