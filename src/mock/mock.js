@@ -16,7 +16,6 @@ export const data = {
         { name: "쫄면", percent: 15 },
         { name: "떡볶이", percent: 20 },
         { name: "돈까스", percent: 25 },
-        { name: "라면", percent: 10 },
       ],
     },
     {
@@ -44,7 +43,6 @@ export const data = {
       contents_give: [
         { name: "치킨마요 덮밥", percent: 20 },
         { name: "김치볶음밥", percent: 20 },
-        { name: "비빔밥", percent: 20 },
         { name: "오징어 덮밥", percent: 20 },
         { name: "제육 덮밥", percent: 20 },
       ],
@@ -56,7 +54,6 @@ export const data = {
         { name: "김치볶음밥", percent: 15 },
         { name: "떡볶이", percent: 20 },
         { name: "돈까스", percent: 25 },
-        { name: "햄버거", percent: 10 },
       ],
     },
     {
@@ -94,7 +91,6 @@ export const data = {
         { name: "짜장면", percent: 20 },
         { name: "볶음밥", percent: 20 },
         { name: "짬뽕", percent: 20 },
-        { name: "간짜장", percent: 20 },
         { name: "잡채밥", percent: 20 },
       ],
     },
@@ -169,7 +165,6 @@ export const data = {
     {
       title_give: "무조건 비싼거",
       contents_give: [
-        { name: "소고기", percent: 20 },
         { name: "곱창", percent: 20 },
         { name: "대창", percent: 20 },
         { name: "막창", percent: 20 },
@@ -179,7 +174,6 @@ export const data = {
     {
       title_give: "부장님 픽",
       contents_give: [
-        { name: "소고기", percent: 30 },
         { name: "삼겹살", percent: 15 },
         { name: "굴", percent: 20 },
         { name: "매운탕", percent: 25 },
@@ -221,7 +215,6 @@ export const data = {
         { name: "김밥", percent: 30 },
         { name: "쫄면", percent: 15 },
         { name: "떡볶이", percent: 20 },
-        { name: "돈까스", percent: 25 },
         { name: "라면", percent: 10 },
       ],
     },
@@ -260,7 +253,6 @@ export const data = {
         { name: "김밥", percent: 30 },
         { name: "쫄면", percent: 15 },
         { name: "떡볶이", percent: 20 },
-        { name: "돈까스", percent: 25 },
         { name: "라면", percent: 10 },
       ],
     },
@@ -297,7 +289,6 @@ export const data = {
       title_give: "분식 최고",
       contents_give: [
         { name: "김밥", percent: 30 },
-        { name: "쫄면", percent: 15 },
         { name: "떡볶이", percent: 20 },
         { name: "돈까스", percent: 25 },
         { name: "라면", percent: 10 },

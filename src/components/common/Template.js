@@ -35,11 +35,13 @@ const FullWrap = styled.div`
 const MainTemplate = styled.div`
   box-sizing: border-box;
   position: relative;
-  width: 480px;
-  height: 700px;
-  padding: 50px 60px;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  padding: 50px 30px;
   background-color: #6bc59c;
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.15);
+  font-size: 16px;
 `;
 
 const TemplateTop = styled.div`
@@ -47,7 +49,7 @@ const TemplateTop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 `;
 
 const GoBackBtn = styled.div`

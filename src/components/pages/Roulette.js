@@ -149,7 +149,7 @@ const LinkButton = styled.button`
   width: 100%;
   height: 50px;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 1.3em;
   color: #fff;
   background-color: #10af8d;
 `;

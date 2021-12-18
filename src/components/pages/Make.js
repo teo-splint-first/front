@@ -20,7 +20,6 @@ const mock = [
  */
 const MakeTemplate = () => {
   const { state: rouletteData } = useLocation();
-  console.log(rouletteData);
   const [title, setTitle] = useState(rouletteData?.title_give || "");
   const [isEdit, setIsEdit] = useState(false);
   const [roulette, setRoulette] = useState(
@@ -54,6 +53,10 @@ const MakeTemplate = () => {
     setRoulette((prev) => prev.filter((el, elIdx) => idx !== elIdx));
   };
   const handleSubmit = () => {
+    if (title === "") {
+      alert("음식이름을 작성해주세요.");
+      return;
+    }
     if (roulette.length !== 4) {
       alert("현재 룰렛은 4개만 가능합니다.");
       return;
@@ -102,7 +105,7 @@ const MakeTemplate = () => {
             <List>
               <ListLabel>{el.label}</ListLabel>
               <Slider
-                style={{ minWidth: "250px" }}
+                style={{ width: "100%" }}
                 max={10}
                 min={0}
                 defaultValue={el.point}
@@ -157,6 +160,7 @@ const DeleteButton = styled.button`
   border: 0;
   background: none;
   color: #fff;
+  min-width: 40px;
 `;
 const Submit = styled.button`
   width: calc(100% - 100px);
