@@ -21,26 +21,25 @@ const Result = () => {
         <LinkButton onClick={() => navigate("/")}>메인으로</LinkButton>
       </Top>
       <MapDesc>
-        <Text>지도를 이용해</Text>
-        <Text>주변 가게를 추천해드립니다.</Text>
+        {`지도를 이용해\n
+        주변 가게를 추천해드립니다.`}
       </MapDesc>
-      <LinkButton
+      <LastButton
         onClick={() => {
           window.open(`https://map.naver.com/v5/search/${result}`);
         }}
       >
         주변 가게 추천받기
-      </LinkButton>
+      </LastButton>
     </Template>
   );
 };
 
 const Top = styled.div`
-  margin-top: 50px;
   margin-bottom: 85px;
 `;
 const Text = styled.p`
-  font-size: 28px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   margin: 0;
@@ -59,8 +58,13 @@ const ResultDesc = styled.div`
     margin-bottom: 10px;
   }
 `;
-const MapDesc = styled.div`
+const MapDesc = styled.p`
+  font-size: 1.15em;
   margin-bottom: 20px;
+  white-space: pre-wrap;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
 `;
 
 const LinkButton = styled.button`
@@ -71,9 +75,16 @@ const LinkButton = styled.button`
   width: 100%;
   height: 50px;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 1.5em;
   color: #fff;
   background-color: #10af8d;
+`;
+const LastButton = styled(LinkButton)`
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 60px);
 `;
 
 export default Result;

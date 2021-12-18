@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import styled from "styled-components";
 import Template from "../common/Template";
@@ -7,16 +7,20 @@ const Roulette = () => {
   const navigate = useNavigate();
   const { state: roulette } = useLocation();
   const rouletteRef = useRef();
-  const randomRotate = Math.floor(Math.random() * 360) + 3555;
-  const resultIndex = Math.floor((randomRotate - 3555) / 90);
-
+  const [randomRotate, setRandom] = useState(0);
   const onRoulette = useCallback(() => {
-    rouletteRef.current.classList.add("rotate_on");
-
+    const randomDeg = Math.floor(Math.random() * 360) + 3555;
+    const resultIndex = Math.floor((randomDeg - 3555) / 90);
+    setRandom(randomDeg);
     setTimeout(() => {
-      navigate("/result", { state: { template: roulette.title_give, result: roulette.contents_give[resultIndex].name } });
+      navigate("/result", {
+        state: {
+          template: roulette.title_give,
+          result: roulette.contents_give[resultIndex].name,
+        },
+      });
     }, 4500);
-  }, [rouletteRef, roulette, resultIndex, navigate]);
+  }, [roulette, navigate]);
 
   return (
     <Template goBackBtn>
@@ -33,7 +37,9 @@ const Roulette = () => {
           ))}
         </O>
       </Outer>
-      <LinkButton onClick={() => navigate("/make")}>수정</LinkButton>
+      <LinkButton onClick={() => navigate("/make", { state: roulette })}>
+        수정
+      </LinkButton>
       <LinkButton onClick={onRoulette}>돌리기</LinkButton>
     </Template>
   );
@@ -69,9 +75,7 @@ const Outer = styled.div`
   border-radius: 50%;
   transition: 4s;
 
-  &.rotate_on {
-    transform: ${({ rotate }) => `rotate(-${rotate}deg)`};
-  }
+  transform: ${({ rotate }) => `rotate(-${rotate}deg)`};
 `;
 
 const O = styled.div`
@@ -145,7 +149,7 @@ const LinkButton = styled.button`
   width: 100%;
   height: 50px;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 1.3em;
   color: #fff;
   background-color: #10af8d;
 `;
