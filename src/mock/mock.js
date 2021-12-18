@@ -1,5 +1,5 @@
 export const data = {
-  혼자: [
+  alone: [
     {
       title_give: "출출한 밤 야식",
       contents_give: [
@@ -38,7 +38,7 @@ export const data = {
       ],
     },
   ],
-  친구: [
+  friend: [
     {
       title_give: "간단한 밥류",
       contents_give: [
@@ -87,7 +87,7 @@ export const data = {
       ],
     },
   ],
-  회사: [
+  company: [
     {
       title_give: "중식 메뉴",
       contents_give: [
@@ -126,7 +126,7 @@ export const data = {
       ],
     },
   ],
-  가족: [
+  family: [
     {
       title_give: "엄빠랑 먹기 좋은 메뉴",
       contents_give: [
@@ -165,7 +165,7 @@ export const data = {
       ],
     },
   ],
-  회식: [
+  afterCompany: [
     {
       title_give: "무조건 비싼거",
       contents_give: [
@@ -205,7 +205,7 @@ export const data = {
       ],
     },
   ],
-  비오는날: [
+  rainny: [
     {
       title_give: "출출한 밤 야식",
       contents_give: [
@@ -244,7 +244,7 @@ export const data = {
       ],
     },
   ],
-  소개팅: [
+  dating: [
     {
       title_give: "출출한 밤 야식",
       contents_give: [
@@ -283,7 +283,7 @@ export const data = {
       ],
     },
   ],
-  단체: [
+  withAll: [
     {
       title_give: "출출한 밤 야식",
       contents_give: [

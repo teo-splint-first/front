@@ -15,19 +15,22 @@ const Templates = () => {
 
   return (
     <Template goBackBtn>
+      <Text size={"1.5em"}>({topic})</Text>
       <Text>원하는 룰렛을 선택하세요</Text>
       <RouletteWrap>
-        {data[topic].map((roulette, index) => (
-          <Roulette
-            key={index}
-            onClick={() => navigate("/roulette", { state: roulette })}
-          >
-            <RouletteTop>{roulette.title_give}</RouletteTop>
-            <RouletteBottom>
-              {roulette.contents_give.map((food) => `${food.name}, `)}
-            </RouletteBottom>
-          </Roulette>
-        ))}
+        {data[topic].map((roulette, index) => {
+          return (
+            <Roulette
+              key={index}
+              onClick={() => navigate("/roulette", { state: roulette })}
+            >
+              <RouletteTop>{roulette.title_give}</RouletteTop>
+              <RouletteBottom>
+                {roulette.contents_give.map((food) => `${food.name}, `)}
+              </RouletteBottom>
+            </Roulette>
+          );
+        })}
       </RouletteWrap>
       <LinkButton
         onClick={() => navigate("/roulette", { state: randomPick() })}
@@ -42,10 +45,10 @@ const Templates = () => {
 };
 
 const Text = styled.p`
-  font-size: 28px;
+  font-size: ${(p) => (p.size ? p.size : "1.5em")};
   color: #fff;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0.5em;
   line-height: 1.15;
 `;
 

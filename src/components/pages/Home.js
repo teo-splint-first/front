@@ -15,8 +15,8 @@ const Home = () => {
       <Text>상황에 맞는 주제를 골라보세요</Text>
       <Topic>
         {topicBtnArr.map((topic) => (
-          <Btn key={topic} onClick={() => navigate(`/template/${topic}`)}>
-            {topic}
+          <Btn key={topic} onClick={() => navigate(`/template/${topic.key}`)}>
+            {topic.label}
           </Btn>
         ))}
       </Topic>
